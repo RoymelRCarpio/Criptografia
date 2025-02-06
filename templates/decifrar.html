@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Decifrar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1>Página de Decifragem</h1>
+    <form method="post">
+        <label for="texto">Mensagem cifrada:</label><br>
+        <input type="text" id="texto" name="texto" required><br><br>
+        <label for="chave">Chave (número inteiro):</label><br>
+        <input type="number" id="chave" name="chave" required><br><br>
+        <button type="submit">Executar</button>
+    </form>
+    {% if mensagem %}
+        <p class="error">{{ mensagem }}</p>
+    {% endif %}
+    {% if resultado %}
+        <p class="result">Texto Decifrado: {{ resultado }}</p>
+    {% endif %}
+    <br>
+    <a href="/">Voltar</a>
+    <div>
+</body>
+</html>

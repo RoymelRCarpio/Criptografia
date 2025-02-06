@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Bem-vindo ao aplicativo de criptografia simple</h1>
+    <p>Este programa permite cifrar e decifrar textos utilizando uma chave numérica.</p>
+    <p>Escolha a opção desejada: Cifrar ou Decifrar.</p>
+    <a href="/cifrar"><button>Cifrar</button></a>
+    <a href="/decifrar"><button>Decifrar</button></a>
+<div>
+</body>
+</html>
